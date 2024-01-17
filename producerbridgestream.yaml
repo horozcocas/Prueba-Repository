@@ -19,9 +19,51 @@ spring:
        bindings:
          output:                                  # Corresponde al nombre usado en StreamBridge
             destination: event.test.notification  # Corresponde al nombre del topico en kafka. En Rabbit al exchange
-            binder: kafka                         # binder al cual se enlaza
+            binder: kafka                        # binder al cual se enlaza
             content-type: application/json
 
+       kafka:
+         binder:
+           brokers: localhost:9092            # con brokers  no adiciona el localhost:9092 por defecto. Si son varios serparar por ;
+         # brokers: my-cluster-kafka-listener1-bootstrap-poc-eda.apps.ocplab.ambientesbc.lab:443
+           auto-create-topics: true
+        #  configuration:
+        #    security:
+        #       protocol: SSL
+        #    ssl:
+              # truststore.location: C:/_Work/_BancolombiaOpenshift/truststore/truststore.jks
+        #       truststore.location: C:\_Work\_BancolombiaOpenshift\truststore\truststore.jks
+        #       truststore.password: osdf
+        #       truststore.type: JKS
+        #       keystore.location: C:/xxx/xxxx/keystore.jks
+        #       keystore.password: xxxxx
+        #       key.password: yyyyy
+        #       enabled.protocols: TLSv1.2,TLSv1.1,TLSv1
+        #       keystore.type: JKS
+        #       endpoint.identification.algorithm:
+
+         # properties:
+         #     schema:
+         #        registry:
+         #           url: http://localhost:8081
+         # configuration:
+         #     value:
+         #        deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+         #        serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+
+       #------
+       # binder RabbitMQ
+       rabbit:
+         binder:
+           type: rabbit
+           environment:
+             spring:
+               rabbitmq:
+                 host: localhost
+                 port: 5672
+                 username: guest
+                 password: guest
+                 virtual-host: /
 #------
 
 management:
