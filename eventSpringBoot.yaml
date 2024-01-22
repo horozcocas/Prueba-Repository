@@ -26,3 +26,10 @@ cors:
 # Varialbles de prueba
 app:
    ambiente: produccion
+
+# Requerida para usar operación refresh de actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'   
