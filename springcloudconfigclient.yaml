@@ -6,6 +6,6 @@ spring:
 
 # Varialbles de prueba
 app:
-   ambiente: test
+   ambiente: pruebas
 
 
