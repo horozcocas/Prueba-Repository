@@ -15,21 +15,18 @@ management:
   endpoints:
     web:
       exposure:
-        include: "health,prometheus"
+ #      include: "health,prometheus"
+        include: '*' 
   endpoint:
     health:
       probes:
         enabled: true
+       
 cors:
   allowed-origins: "http://localhost:4200,http://localhost:8080"
 
 # Varialbles de prueba
 app:
-   ambiente: produccion
+   ambiente: produccion  
 
-# Requerida para usar operación refresh de actuator
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'   
+  
