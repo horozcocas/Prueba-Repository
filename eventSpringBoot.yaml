@@ -27,6 +27,6 @@ cors:
 
 # Varialbles de prueba
 app:
-   ambiente: produccion  
+   ambiente: pruebas  
 
   
