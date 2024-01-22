@@ -15,8 +15,8 @@ management:
   endpoints:
     web:
       exposure:
- #      include: "health,prometheus"
-        include: '*' 
+        include: "health,prometheus, refresh"
+ #      include: '*' 
   endpoint:
     health:
       probes:
