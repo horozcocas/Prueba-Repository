@@ -1,5 +1,5 @@
 server:
-  port: 8087
+  port: 8080
 spring:
   application:
     name: "eventSpringBoot"
@@ -22,3 +22,7 @@ management:
         enabled: true
 cors:
   allowed-origins: "http://localhost:4200,http://localhost:8080"
+
+# Varialbles de prueba
+app:
+   ambiente: produccion
