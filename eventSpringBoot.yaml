@@ -27,6 +27,6 @@ cors:
 
 # Varialbles de prueba
 app:
-   ambiente: pruebas  
+   ambiente: testnofuncional  
 
   
