@@ -70,7 +70,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: "health,prometheus,refresh,shutdown"
+        include: "health,prometheus,refresh,env"
   endpoint:
     health:
       probes:
