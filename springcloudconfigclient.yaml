@@ -6,6 +6,6 @@ spring:
 
 # Varialbles de prueba
 app:
-   ambiente: testing2
+   ambiente: produccion
 
 
