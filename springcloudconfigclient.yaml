@@ -1,11 +1,11 @@
 server:
-  port: 8090
+  port: 8097
 spring:
   application:
     name: "springcloudconfigclient"
 
 # Varialbles de prueba
 app:
-   ambiente: producción
+   ambiente: qa
 
 
