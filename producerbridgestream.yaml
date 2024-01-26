@@ -19,7 +19,7 @@ spring:
        bindings:
          output:                                  # Corresponde al nombre usado en StreamBridge
             destination: event.test.notification  # Corresponde al nombre del topico en kafka. En Rabbit al exchange
-            binder: kafka                         # binder al cual se enlaza
+            binder: rabbit                        # binder al cual se enlaza
             content-type: application/json
 
        kafka:
