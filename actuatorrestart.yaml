@@ -1,8 +1,5 @@
 server:
   port: 9001
-spring:
-  application:
-    name: "actuatorrestart"
 
 # Varialbles de prueba
 app:
